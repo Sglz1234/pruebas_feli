@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ejemplo</title>
+</head>
+<body>
+    <div style="text-align: right;">
+        {% if user.is_authenticated %}
+            <a href="{% url 'agregar_producto' %}" class="btn btn-primary">Añadir Producto</a>
+            <a href="{% url 'logout' %}" class="btn btn-secondary">Cerrar sesión</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn btn-primary">Iniciar sesión</a>
+        {% endif %}
+    </div>
+    <header>
+        <h1>Bienvenido a la Tienda de Ejemplo</h1>
+        <p>Descubre nuestros productos increíbles</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Nuestros Productos</h2>
+            <ul>
+                <li>Producto 1</li>
+                <li>Producto 2</li>
+                <li>Producto 3</li>
+                <!-- Agrega más productos según sea necesario -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: info@tienda-ejemplo.com</p>
+    </footer>
+</body>
+</html>
