@@ -1,3 +1,43 @@
+{#<!DOCTYPE html>#}
+{#<html lang="es">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>Tienda de Ejemplo</title>#}
+{#</head>#}
+{#<body>#}
+{#    <div style="text-align: right;">#}
+{#        {% if user.is_authenticated %}#}
+{#            <a href="{% url 'agregar_producto' %}" class="btn btn-primary">Añadir Producto</a>#}
+{#            <a href="{% url 'logout' %}" class="btn btn-secondary">Cerrar sesión</a>#}
+{#        {% else %}#}
+{#            <a href="{% url 'login' %}" class="btn btn-primary">Iniciar sesión</a>#}
+{#        {% endif %}#}
+{#    </div>#}
+{#    <header>#}
+{#        <h1>Bienvenido a la Tienda de Ejemplo</h1>#}
+{#        <p>Descubre nuestros productos increíbles</p>#}
+{#    </header>#}
+{##}
+{#    <main>#}
+{#        <section>#}
+{#            <h2>Nuestros Productos</h2>#}
+{#            <ul>#}
+{#                <li>Producto 1</li>#}
+{#                <li>Producto 2</li>#}
+{#                <li>Producto 3</li>#}
+{#                <!-- Agrega más productos según sea necesario -->#}
+{#            </ul>#}
+{#        </section>#}
+{#    </main>#}
+{##}
+{#    <footer>#}
+{#        <p>Contacto: info@tienda-ejemplo.com</p>#}
+{#    </footer>#}
+{#</body>#}
+{#</html>#}
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,33 +46,259 @@
     <title>Tienda de Ejemplo</title>
 </head>
 <body>
-    <div style="text-align: right;">
-        {% if user.is_authenticated %}
-            <a href="{% url 'agregar_producto' %}" class="btn btn-primary">Añadir Producto</a>
-            <a href="{% url 'logout' %}" class="btn btn-secondary">Cerrar sesión</a>
-        {% else %}
-            <a href="{% url 'login' %}" class="btn btn-primary">Iniciar sesión</a>
-        {% endif %}
+    <div class="flex flex-col max-w-full w-[1291px]">
+      <div
+        class="flex gap-5 py-6 pr-7 pl-20 w-full text-base font-medium text-white whitespace-nowrap bg-slate-400 rounded-[30px] max-md:flex-wrap max-md:px-5 max-md:max-w-full"
+      >
+        <img
+          loading="lazy"
+          srcset="..."
+          class="shrink-0 max-w-full aspect-[3.85] w-[155px]"
+        />
+        <div class="flex gap-5 justify-between self-start">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1544f0833ffc83531aa3d9f1b6de2fe99d06876d7e68dbc0961f43840399ed8?"
+            class="shrink-0 w-10 aspect-square"
+          />
+          <div
+            class="justify-center px-7 py-2.5 rounded-2xl border border-solid border-zinc-100 max-md:px-5"
+          >
+            CONTACTO
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col self-end mt-16 max-w-full text-slate-400 w-[933px] max-md:mt-10"
+      >
+        <div
+          class="flex gap-5 justify-between items-start self-start text-lg font-semibold whitespace-nowrap max-md:flex-wrap"
+        >
+          <div
+            class="justify-center px-7 py-2.5 rounded-3xl border border-solid border-slate-400 max-md:px-5"
+          >
+            Opción
+          </div>
+          <div
+            class="justify-center px-7 py-2.5 text-white bg-red-300 rounded-3xl max-md:px-5"
+          >
+            Opción
+          </div>
+          <div
+            class="justify-center px-7 py-2.5 rounded-3xl border border-solid border-slate-400 max-md:px-5"
+          >
+            Opción
+          </div>
+          <div
+            class="justify-center px-7 py-2.5 rounded-3xl border border-solid border-slate-400 max-md:px-5"
+          >
+            Opción
+          </div>
+        </div>
+        <div class="flex gap-5 self-end mt-16 text-xl max-md:mt-10">
+          <div class="flex-auto">Ordenar por</div>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9b50441247927b2e92e2aac13954f558dfce5f0837f7faab300c871e848ea02d?"
+            class="shrink-0 self-start w-5 aspect-square"
+          />
+        </div>
+      </div>
+      <div class="px-0.5 mt-12 max-md:mt-10 max-md:max-w-full">
+        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-0.5 mt-7 max-md:max-w-full">
+        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-0.5 mt-7 max-md:max-w-full">
+        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col grow px-4 pt-4 pb-12 text-xl font-medium text-gray-600 border border-solid border-slate-400 rounded-[30px] max-md:mt-8"
+            >
+              <img
+                loading="lazy"
+                srcset="..."
+                class="w-full border border-gray-400 border-solid aspect-[0.89]"
+              />
+              <div class="mt-8">Título producto</div>
+              <div class="mt-5">0,00€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex gap-5 justify-between px-12 py-5 mt-24 w-full bg-slate-400 rounded-[30px] max-md:flex-wrap max-md:px-5 max-md:mt-10 max-md:max-w-full"
+      >
+        <img
+          loading="lazy"
+          srcset="..."
+          class="shrink-0 my-auto max-w-full aspect-[3.85] w-[155px]"
+        />
+        <div class="flex gap-5 justify-between items-start">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4906e557dcc74b073b778af804cd57bd2dc01195d868c57fa741eb699f5015df?"
+            class="shrink-0 aspect-square w-[50px]"
+          />
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c52f03e0d548fc93be228c85c535ea33e547fdbbbad674d75f92feea994e0ac7?"
+            class="shrink-0 self-stretch my-auto aspect-square w-[42px]"
+          />
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/be70863c0120d12de002552973da36fef68fb2520f3aa268d777eb7e4cd3b5f8?"
+            class="shrink-0 aspect-square w-[50px]"
+          />
+        </div>
+      </div>
     </div>
-    <header>
-        <h1>Bienvenido a la Tienda de Ejemplo</h1>
-        <p>Descubre nuestros productos increíbles</p>
-    </header>
-
-    <main>
-        <section>
-            <h2>Nuestros Productos</h2>
-            <ul>
-                <li>Producto 1</li>
-                <li>Producto 2</li>
-                <li>Producto 3</li>
-                <!-- Agrega más productos según sea necesario -->
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Contacto: info@tienda-ejemplo.com</p>
-    </footer>
 </body>
 </html>
+
